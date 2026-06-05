@@ -79,6 +79,19 @@
     .sub-content { display: none; }
     .sub-content.active { display: block; animation: fadeIn 0.3s ease; }
 
+    /* Estilos para las imágenes de los métodos */
+    .method-image-container {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .method-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border: 1px solid var(--light-border);
+    }
+
     /* Tipografía interna */
     h2 { color: #0f172a; margin-bottom: 1rem; font-size: 1.5rem; }
     h3 { color: #0369a1; margin: 1.5rem 0 0.5rem; font-size: 1.1rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; }
@@ -160,6 +173,9 @@
 
       <!-- CONTENIDO: IMPLANTE -->
       <div id="implante" class="sub-content active">
+        <div class="method-image-container">
+          <img src="imagenes/Implante.jpg" alt="Implante subdérmico" class="method-image">
+        </div>
         <h3>🩹 ¿Qué cuidados hay que tener los primeros días?</h3>
         <p>Es importante mantener limpia la zona con agua y jabón. Es habitual que aparezca un área de pequeños hematomas o enrojecimiento. Si el enrojecimiento persiste, hay aumento de temperatura o dolor, consultar al equipo de salud.</p>
         <h3>😣 ¿El implante produce dolor?</h3>
@@ -190,6 +206,9 @@
       
       <!-- CONTENIDO: INYECCIÓN MENSUAL -->
       <div id="inyeccion-mensual" class="sub-content">
+        <div class="method-image-container">
+          <img src="imagenes/Inyectable.jpg" alt="Inyección anticonceptiva mensual" class="method-image">
+        </div>
         <h3>📅 ¿Cuándo aplicar la primera inyección?</h3>
         <p>Se recomienda el <strong>primer día de la menstruación</strong>. Si se comienza en otro momento, usar preservativo por 7 días. Luego de un aborto, puede iniciarse inmediatamente.</p>
         <h3>🔄 ¿Cómo continuar con la aplicación?</h3>
@@ -220,6 +239,9 @@
 
       <!-- CONTENIDO: INYECCIÓN TRIMESTRAL -->
       <div id="inyeccion-trimestral" class="sub-content">
+        <div class="method-image-container">
+          <img src="imagenes/Inyectable.jpg" alt="Inyección anticonceptiva trimestral" class="method-image">
+        </div>
         <h3>📅 ¿Cuándo aplicar la primera inyección?</h3>
         <p>Se recomienda iniciar el <strong>primer día del ciclo menstrual</strong>. Si se comienza en otro momento, usar preservativo por 7 días. Puede administrarse inmediatamente post aborto.</p>
         <ul>
@@ -263,6 +285,9 @@
 
       <!-- CONTENIDO: PASTILLAS 21 DÍAS -->
       <div id="pastillas-21" class="sub-content">
+        <div class="method-image-container">
+          <img src="imagenes/21.jpg" alt="Pastillas anticonceptivas combinadas 21 días" class="method-image">
+        </div>
         <h3>💊 ¿Cuándo se empieza a tomar la primera pastilla?</h3>
         <p>Se recomienda iniciar el <strong>primer día de la menstruación</strong>. Si se comienza en otro momento o en ausencia de menstruación, es necesario usar preservativo u otro método de respaldo los primeros 7 días. Luego de un aborto, se puede comenzar inmediatamente.</p>
         <h3>🔢 ¿Por cuál pastilla se empieza?</h3>
@@ -317,6 +342,9 @@
 
       <!-- CONTENIDO: PASTILLAS DESOGESTREL -->
       <div id="pastillas-desogestrel" class="sub-content">
+        <div class="method-image-container">
+          <img src="imagenes/28.jpg" alt="Pastillas anticonceptivas de desogestrel" class="method-image">
+        </div>
         <h3>💊 ¿Cuándo se empieza a tomar la primera pastilla?</h3>
         <p>Se empiezan a tomar el <strong>primer día de la menstruación</strong>. Si se comienza en otro momento o en ausencia de menstruación, es necesario usar preservativo los primeros 7 días. Luego de un aborto, se puede comenzar inmediatamente.</p>
         <ul>
@@ -371,38 +399,31 @@
 
       <!-- CONTENIDO: DIU DE COBRE -->
       <div id="diu-cobre" class="sub-content">
+        <div class="method-image-container">
+          <img src="imagenes/DIU.jpg" alt="Dispositivo Intrauterino de cobre" class="method-image">
+        </div>
         <h3>🩹 ¿Qué cuidados hay que tener los primeros días?</h3>
         <p>Se recomienda <strong>no mantener relaciones sexuales con penetración vaginal</strong>, no colocar óvulos ni tampones, y no hacer duchas vaginales con bidet ni baños de inmersión por los siguientes <strong>7 días</strong> o mientras dure el sangrado.</p>
-
         <h3>🤔 ¿Qué se puede esperar los primeros días? ¿Se siente algo diferente?</h3>
         <p><strong>Si se estaba menstruando:</strong> el sangrado puede ser más abundante de lo habitual, puede haber sangrado entre las menstruaciones y es posible que se sientan molestias abdominales. Esto es normal y esperable.</p>
         <p><strong>Si no se estaba menstruando:</strong> puede aparecer un sangrado leve a moderado, dolores o molestias abdominales y flujo un poco más abundante.</p>
         <p><em>Si los dolores o el sangrado son muy intensos, consultar al equipo de salud.</em></p>
-
         <h3>⏱️ Desde que se coloca el DIU, ¿cuándo es seguro para evitar un embarazo?</h3>
         <p>El DIU evita embarazos desde su colocación, si esta es exitosa. Se recomienda el uso de otro método anticonceptivo de respaldo hasta el primer control para asegurarse de que la colocación haya sido correcta.</p>
-
         <h3>⏳ ¿Cuánto tiempo dura el efecto anticonceptivo del DIU?</h3>
         <p>En general duran entre <strong>5 y 10 años</strong>, dependiendo del modelo utilizado.</p>
-
         <h3>🩺 ¿Hay que controlarlo? ¿Cuándo?</h3>
         <p>En general, se realiza un control a los <strong>7 días</strong> de la colocación. Otro, después de la primera menstruación, y cada 6 meses o un año, según lo recomendado por el equipo de salud.</p>
-
         <h3>🔍 ¿Cómo son los controles?</h3>
         <p>En general, es suficiente hacer un examen ginecológico con espéculo para ver los hilos. También se puede hacer el control con ecografía, pero esto no es indispensable.</p>
-
         <h3>🖐️ ¿Es posible saber si el DIU está en su lugar?</h3>
         <p>Sí, con controles médicos o con ecografía. También es posible tocarse los hilos introduciendo uno o dos dedos hasta el fondo de la vagina, teniendo <strong>mucho cuidado de no tirar de ellos</strong>.</p>
-
         <h3>🩸 ¿Cuándo vendrá la menstruación y cómo?</h3>
         <p>Las menstruaciones seguirán su ritmo habitual, es posible que sean de mayor cantidad y duren más días. Pueden ser un poco más dolorosas que antes (esto suele ceder con analgésicos comunes como ibuprofeno). Los primeros meses, puede haber un pequeño sangrado entre las menstruaciones.</p>
-
         <h3>💑 ¿Se sienten los hilos al mantener relaciones sexuales?</h3>
         <p>Es muy poco probable que se sientan los hilos o que molesten durante la relación. Si esto llegara a pasar, consultar al equipo de salud, ya que pueden acortarse.</p>
-
         <h3>📋 ¿Puede hacerse el PAP (Papanicolaou) con el DIU?</h3>
         <p>Sí, no hay ningún problema. Es conveniente aprovechar el control del DIU para realizarse el PAP en el momento indicado por el equipo de salud.</p>
-
         <h3>🤱 ¿Qué tener en cuenta si el DIU fue colocado luego del parto o cesárea?</h3>
         <p>Si se colocó en forma inmediata (hasta 48 horas después) del parto o cesárea, hay que tener en cuenta:</p>
         <ul>
@@ -410,7 +431,6 @@
           <li>Hasta que concurra al control y se verifique que el DIU está correctamente ubicado, es necesario utilizar otro método anticonceptivo de respaldo (como anticonceptivos orales para la lactancia o preservativo).</li>
           <li>A los <strong>30 días</strong> de la colocación debe asistir a un control para verificar que el DIU siga bien colocado.</li>
         </ul>
-
         <div class="danger-box">
           🚨 <strong>Es importante consultar de inmediato si se presenta:</strong><br>
           • Flujo con mal olor<br>
@@ -420,7 +440,6 @@
           • Molestias durante las relaciones sexuales<br>
           • Falta de menstruación (sospecha de embarazo)
         </div>
-
         <div class="alert">
           🛡️ <strong>Alerta:</strong> El DIU no previene el VIH ni otras infecciones de transmisión sexual (ITS). Por eso es recomendable sumar el uso del preservativo para prevenirlas.
         </div>
