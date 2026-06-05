@@ -124,6 +124,17 @@
     }
     .section-footer a { color: #0284c7; text-decoration: none; font-weight: 500; }
     .section-footer a:hover { text-decoration: underline; }
+    .creator-credit {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--light-border);
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+    .creator-credit a {
+      color: #0284c7;
+      text-decoration: none;
+    }
 
     /* Footer global */
     footer {
@@ -447,9 +458,10 @@
 
       <!-- FOOTER ESPECÍFICO DE SALUD SEXUAL -->
       <div class="section-footer">
-        <p>📧 <a href="mailto:saludsexual@msal.gob.ar">saludsexual@msal.gob.ar</a></p>
-        <p>🌐 <a href="https://argentina.gob.ar/salud/saludsexual" target="_blank" rel="noopener">argentina.gob.ar/salud/saludsexual</a></p>
-        <p style="margin-top: 1rem; font-weight: 500; color: #92400e;">⚠️ <strong>Recordá:</strong> Ningún método anticonceptivo (excepto el preservativo) previene el VIH y otras infecciones de transmisión sexual (ITS).</p>
+        <p>Información obtenida de: 🌐 <a href="https://argentina.gob.ar/salud/saludsexual" target="_blank" rel="noopener">argentina.gob.ar/salud/saludsexual</a></p>
+        <div class="creator-credit">
+          <p>Creado por <strong>Leandro Antonielli</strong> - Mail: <a href="mailto:leandroantonielli@gmail.com">leandroantonielli@gmail.com</a></p>
+        </div>
       </div>
     </section>
 
@@ -469,9 +481,32 @@
       <p>📝 Contenido en desarrollo. Próximamente disponible.</p>
     </section>
     
+    <!-- ALIMENTACIÓN ESPECIAL CON IMÁGENES -->
     <section id="alimentacion-especial" class="content-section">
       <h2>🥗 Alimentación en situaciones especiales</h2>
-      <p>📝 (Hemorroides, gastritis, litiasis biliar) Contenido en desarrollo. Próximamente disponible.</p>
+      <div class="sub-tabs">
+        <button class="sub-btn active" data-target="constipacion">Pautas en caso de constipación</button>
+        <button class="sub-btn" data-target="gastritis-litiasis">Alimentación en gastritis o litiasis biliar</button>
+        <button class="sub-btn" data-target="hemorroides">Pautas y alimentación para hemorroides</button>
+      </div>
+
+      <div id="constipacion" class="sub-content active">
+        <div class="method-image-container">
+          <img src="imagenes/constipacion.png" alt="Pautas en caso de constipación" class="method-image">
+        </div>
+      </div>
+
+      <div id="gastritis-litiasis" class="sub-content">
+        <div class="method-image-container">
+          <img src="imagenes/gastritislitiasis.png" alt="Alimentación en gastritis o litiasis biliar" class="method-image">
+        </div>
+      </div>
+
+      <div id="hemorroides" class="sub-content">
+        <div class="method-image-container">
+          <img src="imagenes/hemorroides.png" alt="Pautas y alimentación para hemorroides" class="method-image">
+        </div>
+      </div>
     </section>
   </main>
 
@@ -497,14 +532,20 @@
         });
       });
 
-      // Lógica para sub-pestañas (Métodos)
+      // Lógica para sub-pestañas (Métodos y Alimentación especial)
       const subTabs = document.querySelectorAll('.sub-btn');
       const subContents = document.querySelectorAll('.sub-content');
       
       subTabs.forEach(btn => {
         btn.addEventListener('click', () => {
-          subTabs.forEach(b => b.classList.remove('active'));
-          subContents.forEach(c => c.classList.remove('active'));
+          // Encontrar la sección padre y desactivar solo sus sub-contenidos
+          const parentSection = btn.closest('.content-section');
+          const parentSubTabs = parentSection.querySelectorAll('.sub-btn');
+          const parentSubContents = parentSection.querySelectorAll('.sub-content');
+          
+          parentSubTabs.forEach(b => b.classList.remove('active'));
+          parentSubContents.forEach(c => c.classList.remove('active'));
+          
           btn.classList.add('active');
           document.getElementById(btn.dataset.target).classList.add('active');
         });
